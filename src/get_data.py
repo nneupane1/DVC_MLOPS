@@ -13,14 +13,14 @@ def read_params(config_path):
     return config
 
 
-def get_data(config_path):
+def get_data(config_path: object) -> object:
     config = read_params(config_path)
     # print(config)
     data_path = config["data_source"]["s3_source"]
     df = pd.read_csv(data_path, sep=",", encoding='utf-8')
     #print(df.head(10))
     return df
-
+## See some changes to check dvc repro
 
 if __name__ == "__main__":
     args = argparse.ArgumentParser()
