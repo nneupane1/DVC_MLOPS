@@ -2,5 +2,6 @@ dvc
 dvc[gdrive]
 sklearn
 pandas
-yaml
 numpy
+pytest
+tox
